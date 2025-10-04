@@ -2,7 +2,7 @@
 require("constantes.php");
 
 
-
+/** */
 function conectDB(){
     try {
         // el objeto conn se encarga de conectar la base de datos
@@ -20,6 +20,7 @@ function conectDB(){
     return $conn;
 }
 
+/**/
 function listarUsers() {
     
     $query = "SELECT * FROM users;";
@@ -41,6 +42,7 @@ function listarUsers() {
 
 }
 
+/** */
 function listarvehicles() {
     
     $query = "SELECT * FROM vehicles;";
