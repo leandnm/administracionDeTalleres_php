@@ -74,7 +74,6 @@ $user = buscarUserPorId($vehicle["user_id"]);
                             ?>
                             <a href="<?php echo $url; ?>">Update</a>
                             
-                            <a>show</a>
 
                             <form action='eliminarVehiculo.php' method='post'>
                                 
