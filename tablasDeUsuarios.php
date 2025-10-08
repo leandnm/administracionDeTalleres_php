@@ -149,7 +149,6 @@ $usuariof= buscarUserPorIdConVehiculo($idVehicle);
 
                             <td><?php echo $vehicles[$i]["updated_at"];?></td>
 
-                            <td><?php echo $vehicles[$i]["user_id"];?></td>
 
                         </tr>
 
