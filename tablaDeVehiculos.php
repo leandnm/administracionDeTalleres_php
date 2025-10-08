@@ -76,7 +76,17 @@ $user = buscarUserPorId($vehicle["user_id"]);
                             
                             <a>show</a>
 
-                            <button>Delete</button>
+                            <form action='eliminarVehiculo.php' method='post'>
+                                
+                                <div>
+                                    <input name='id' type='hidden' value="<?php echo $vehicle['id']; ?>">
+                                    
+                                    <button type='submit' onclick='confirm("Seguro que quieres borrar?")'>Eliminar</button>
+                                </div>
+
+                                
+
+                            </form>
                         </div></td>
                         
                     </tr>
