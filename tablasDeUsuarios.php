@@ -88,8 +88,12 @@ $usuariof= buscarUserPorIdConVehiculo($idVehicle);
                     
                     <td>
                         <div>
-                            <form action="" method="post">
+                            <form action="eliminarUsuario.php" method="post">
                                 <a href="actualizarUsuario.php?idU=<?php echo $usuariof["id"];?>">Actualizar</a>
+                                
+                                <input type="hidden" name="id" value="<?php echo $usuariof["id"];?>">
+
+
                                 <button type="submit">Eliminar</button>
                             </form>
                             
