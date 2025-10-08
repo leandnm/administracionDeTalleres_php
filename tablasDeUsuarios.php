@@ -65,14 +65,14 @@ $usuariof= buscarUserPorIdConVehiculo($idVehicle);
                     <td><?php if ($usuariof["status"] == "active") {
                         ?>
 
-                        <input type="checkbox" checked>
+                        <input type="checkbox" checked disabled>
 
                         <?php
                     } else {
                         
                         ?>
 
-                        <input type="checkbox">
+                        <input type="checkbox" disabled>
 
                         <?php
                     }
@@ -86,6 +86,15 @@ $usuariof= buscarUserPorIdConVehiculo($idVehicle);
 
                     <td><?php echo $usuariof["updated_at"];?></td>    
                     
+                    <td>
+                        <div>
+                            <form action="" method="post">
+                                <a href="actualizarUsuario.php?idU=<?php echo $usuariof["id"];?>">Actualizar</a>
+                                <button type="submit">Eliminar</button>
+                            </form>
+                            
+                        </div>
+                    </td>
                 
                 </tr>
 
@@ -138,7 +147,7 @@ $usuariof= buscarUserPorIdConVehiculo($idVehicle);
                             <td>
                                 <?php 
                                 $status = ($vehicles[$i]["status"] === "active") ? "checked" : ""; ?>
-                                <input type="checkbox" <?php echo $status; ?>/> 
+                                <input type="checkbox" <?php echo $status; ?> disabled/> 
                             </td>
                             
                             <td><?php echo $vehicles[$i]["color"];?></td>
