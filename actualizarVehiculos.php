@@ -61,7 +61,7 @@ $vehiculo = buscarVehiclePorId($idVehiculo);
                 <select name="status">
                     <?php if ($vehiculo["status"] == "active") { ?>
                         <option value="active" selected>activo</option>
-                        <option value="incative">inactivo</option>
+                        <option value="inactive">inactivo</option>
                         <option value="suspend">suspendido</option>
                 
                         <?php

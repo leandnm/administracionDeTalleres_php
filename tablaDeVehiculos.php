@@ -57,7 +57,7 @@ $user = buscarUserPorId($vehicle["user_id"]);
                         <td>
                             <?php 
                             $status = ($vehicle["status"] === "active") ? "checked" : ""; ?>
-                            <input type="checkbox" <?php echo $status; ?>/>
+                            <input type="checkbox" <?php echo $status; ?> disabled/>
                         </td>
                         
                         <td><?php echo $vehicle["color"]; ?></td>
@@ -128,7 +128,7 @@ $user = buscarUserPorId($vehicle["user_id"]);
                         <td>
                             <?php 
                             $status = ($user["status"] === "active") ? "checked" : ""; ?>
-                            <input type="checkbox" <?php echo $status; ?>/>
+                            <input type="checkbox" <?php echo $status; ?> disabled/>
                         </td>
                         
                         <td><?php echo $user["address"]; ?></td>
