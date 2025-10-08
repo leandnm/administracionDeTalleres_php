@@ -1,6 +1,6 @@
 <?php
 
-include "BaseDeDatos/script.php";
+//include "BaseDeDatos/script.php";
 
 
 

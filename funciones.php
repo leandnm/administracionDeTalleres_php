@@ -136,3 +136,9 @@ function buscarUserPorIdConVehiculo($idUser){
 
     return $user;
 }
+
+function redirect($url) {
+    header('Location: '.$url);
+    die();
+}
+   

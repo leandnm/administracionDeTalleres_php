@@ -67,6 +67,17 @@ $user = buscarUserPorId($vehicle["user_id"]);
                         <td><?php echo $vehicle["creted_at"]; ?></td>
                         
                         <td><?php echo $vehicle["updated_at"]; ?></td>
+
+                        <td><div>
+                            <?php
+                                $url = "actualizarVehiculos.php?idV=" . $vehicle["id"];
+                            ?>
+                            <a href="<?php echo $url; ?>">Update</a>
+                            
+                            <a>show</a>
+
+                            <button>Delete</button>
+                        </div></td>
                         
                     </tr>
                 </tbody>
