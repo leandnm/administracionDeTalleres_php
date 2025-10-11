@@ -22,14 +22,20 @@ $usuario = buscarUserPorId($idUsuario);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
+<body style="background: #191924;
+            background: linear-gradient(330deg, rgba(25, 25, 36, 1) 10%, rgba(102, 100, 100, 1) 90%);">
+
+    <h1 style="padding-top:30px; color:rgb(210, 208, 255);"
+        class="d-flex justify-content-center align-items-center">Ingrese los nuevos datos</h1>
     
-    <div>
+    <div style="display: flex; justify-content:center; aling-items:center; height:569px;">
 
+        
         <form action="guardarUsuario.php" method="post">
-
+            <br>
             <div>
                 <input type="hidden" name="bandera" value="Actualizar">
                 <?php if (isset($idUsuario)) {?>
@@ -40,23 +46,23 @@ $usuario = buscarUserPorId($idUsuario);
             </div>
 
             <div>
-                <label for="name">Marca</label>
+                <label style="color:rgb(210, 208, 255);" for="name">Marca</label><br>
                 <input type="text" name="name" value="<?php echo $usuario["name"];?>">
             </div>
-
+                    <br>
             
             <div>
-                <label for="lastname">lastname</label>
+                <label style="color:rgb(210, 208, 255);" for="lastname">lastname</label><br>
                 <input type="text" name="lastname" value="<?php echo $usuario["lastname"];?>">
-            </div>
-
-            <div>
-                <label for="document">document</label>
+            </div>  
+                    <br>
+            <div>   
+                <label style="color:rgb(210, 208, 255);" for="document">document</label><br>
                 <input type="text" name="document" value="<?php echo $usuario["document"];?>">
             </div>
-            
+                    <br>
             <div>
-                <label for="status">status</label>
+                <label style="color:rgb(210, 208, 255);" for="status">status</label><br>
                 <select name="status">
                     <?php if ($usuario["status"] == "active") { ?>
                         <option value="active" selected>activo</option>
@@ -82,17 +88,17 @@ $usuario = buscarUserPorId($idUsuario);
                     
                 </select>
             </div>
-
+                        <br>
             <div>
-                <label for="address">address</label>
+                <label style="color:rgb(210, 208, 255);" for="address" >address</label><br>
                 <input type="text" name="address" value="<?php echo $usuario["address"];?>">
             </div>
-            
+                        <br>
             <div>
-                <label for="profession">profession</label>
+                <label style="color:rgb(210, 208, 255);" for="profession">profession</label><br>
                 <input type="text" name="profession" value="<?php echo $usuario["profession"];?>">
             </div>
-
+                        <br>
             <div>
                 <button type="submit">Actualizar</button>
 

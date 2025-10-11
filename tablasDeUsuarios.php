@@ -17,20 +17,21 @@ $usuariof= buscarUserPorIdConVehiculo($idVehicle);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
+<body style="background: #191924;
+            background: linear-gradient(330deg, rgba(25, 25, 36, 1) 10%, rgba(102, 100, 100, 1) 90%);">
     
     <a href="index.php">Volver</a>
 
 
-    <div style= "padding:20px">
+    <div style= "padding:20px; height:631px;">
 
         <div>
 
-            <h1>
+            <h1 style="color:rgb(210, 208, 255);">
                 Usuario
             </h1>
 
-            <table class="table table-hover">
+            <table class="table table-dark">
 
                 <thead>
 
@@ -52,7 +53,7 @@ $usuariof= buscarUserPorIdConVehiculo($idVehicle);
 
                 </thead>
 
-                <tbody>
+                <tbody style="border-style:hidden; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
                 <tr>
 
@@ -113,11 +114,11 @@ $usuariof= buscarUserPorIdConVehiculo($idVehicle);
         
         <div>
 
-            <h2><br> Vehiculos</h2>
+            <h2 style="color:rgb(210, 208, 255);"><br> Vehiculos</h2>
 
             
                 
-                <table class="table table-hover">
+                <table class="table table-dark">
 
                     <thead>
                         <td>Marca</td>
@@ -131,50 +132,52 @@ $usuariof= buscarUserPorIdConVehiculo($idVehicle);
                     </thead>
 
 
-                    <tbody>
-<?php
-            $vehicles = $usuariof["vehicles"];
+                    <tbody style="border-style:hidden; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    
+                    <?php
+                    
+                    $vehicles = $usuariof["vehicles"];
 
-            for ($i=0; $i < count($vehicles); $i++) { 
-                
-                
-                
-                ?>
-                        <tr>
+                    for ($i=0; $i < count($vehicles); $i++) { 
+                        
+                        
+                        
+                        ?>
+                                <tr>
 
-                            <td><?php echo $vehicles[$i]["mark"];?></td>
-                            
-                            <td><?php echo $vehicles[$i]["model"];?></td>
+                                    <td><?php echo $vehicles[$i]["mark"];?></td>
+                                    
+                                    <td><?php echo $vehicles[$i]["model"];?></td>
 
-                            <td><?php echo $vehicles[$i]["year"];?></td>
+                                    <td><?php echo $vehicles[$i]["year"];?></td>
 
-                            <td>
-                                <?php 
-                                $status = ($vehicles[$i]["status"] === "active") ? "checked" : ""; ?>
-                                <input type="checkbox" <?php echo $status; ?> disabled/> 
-                            </td>
-                            
-                            <td><?php echo $vehicles[$i]["color"];?></td>
-                            
-                            <td><?php echo $vehicles[$i]["matricula"];?></td>
+                                    <td>
+                                        <?php 
+                                        $status = ($vehicles[$i]["status"] === "active") ? "checked" : ""; ?>
+                                        <input type="checkbox" <?php echo $status; ?> disabled/> 
+                                    </td>
+                                    
+                                    <td><?php echo $vehicles[$i]["color"];?></td>
+                                    
+                                    <td><?php echo $vehicles[$i]["matricula"];?></td>
 
-                            <td><?php echo $vehicles[$i]["creted_at"];?></td>
+                                    <td><?php echo $vehicles[$i]["creted_at"];?></td>
 
-                            <td><?php echo $vehicles[$i]["updated_at"];?></td>
-
-
-                        </tr>
+                                    <td><?php echo $vehicles[$i]["updated_at"];?></td>
 
 
-                <?php
+                                </tr>
 
-                
 
-            }
-            
-            
-            
-            ?>
+                        <?php
+
+                        
+
+                    }
+                    
+                    
+                    
+                    ?>
 
                     </tbody>
 

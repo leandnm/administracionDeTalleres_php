@@ -19,18 +19,19 @@ $user = buscarUserPorId($vehicle["user_id"]);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
+<body style="background: #191924;
+            background: linear-gradient(330deg, rgba(25, 25, 36, 1) 10%, rgba(102, 100, 100, 1) 90%);">
     
     <a href="index.php">Volver</a>
 
 
-    <div>
+    <div style="height:631px;">
 
         <div>
             <br><br>
             <h1>vehiculo</h1>
 
-            <table class="table table-hover">
+            <table class="table table-dark" >
 
                 <thead>
                     <td>Marca</td>
@@ -43,7 +44,7 @@ $user = buscarUserPorId($vehicle["user_id"]);
                     <td>Comprado</td>
                 </thead>
 
-                <tbody>
+                <tbody style="border-style:hidden; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                     
                     
                     <tr>
@@ -100,7 +101,7 @@ $user = buscarUserPorId($vehicle["user_id"]);
             <br><br>
             <h1>Conductor</h1>
 
-            <table class="table table-hover">
+            <table class="table table-dark">
 
                 <thead>
                     <td>Nombre</td>
@@ -113,7 +114,7 @@ $user = buscarUserPorId($vehicle["user_id"]);
                     <td>Actualizado</td>
                 </thead>
 
-                <tbody>
+                <tbody style="border-style:hidden; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
                     
                     
                     <tr>

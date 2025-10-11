@@ -23,11 +23,17 @@ $vehiculo = buscarVehiclePorId($idVehiculo);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
+<body style="background: #191924;
+            background: linear-gradient(330deg, rgba(25, 25, 36, 1) 10%, rgba(102, 100, 100, 1) 90%);">
     
-    <div>
+    <h1 style="padding-top:30px; color:rgb(210, 208, 255);"
+        class="d-flex justify-content-center align-items-center">Ingrese los nuevos datos</h1>
+    
+
+    <div style="display: flex; justify-content:center; aling-items:center; height:569px;">
 
         <form action="guardarVehiculo.php"method="post">
 
@@ -39,25 +45,24 @@ $vehiculo = buscarVehiclePorId($idVehiculo);
 
                 <?php }?>
             </div>
-
+                    <br>
             <div>
-                <label for="mark">Marca</label>
+                <label style="color:rgb(210, 208, 255);" for="mark">Marca</label><br>
                 <input type="text" name="mark" value="<?php echo $vehiculo["mark"];?>">
             </div>
-
-            
+                    <br>
             <div>
-                <label for="model">Model</label>
+                <label style="color:rgb(210, 208, 255);" for="model">Model</label><br>
                 <input type="text" name="model" value="<?php echo $vehiculo["model"];?>">
             </div>
-
+                    <br>
             <div>
-                <label for="year">Year</label>
+                <label style="color:rgb(210, 208, 255);" for="year">Year</label><br>
                 <input type="text" name="year" value="<?php echo $vehiculo["year"];?>">
             </div>
-            
+                    <br>
             <div>
-                <label for="status">status</label>
+                <label style="color:rgb(210, 208, 255);" for="status">status</label><br>
                 <select name="status">
                     <?php if ($vehiculo["status"] == "active") { ?>
                         <option value="active" selected>activo</option>
@@ -83,17 +88,17 @@ $vehiculo = buscarVehiclePorId($idVehiculo);
                     
                 </select>
             </div>
-
+                        <br>
             <div>
-                <label for="color">color</label>
+                <label style="color:rgb(210, 208, 255);" for="color">color</label><br>
                 <input type="text" name="color" value="<?php echo $vehiculo["color"];?>">
             </div>
-            
+                        <br>
             <div>
-                <label for="matricula">Matricula</label>
+                <label style="color:rgb(210, 208, 255);" for="matricula">Matricula</label><br>
                 <input type="text" name="matricula" value="<?php echo $vehiculo["matricula"];?>">
             </div>
-
+                        <br>
             <div>
                 <button type="submit">Actualizar</button>
 
